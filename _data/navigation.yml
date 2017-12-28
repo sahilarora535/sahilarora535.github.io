@@ -2,6 +2,10 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Blog"
+    url: /blog/
+  - title: Categories
+    url: /categories/
   - title: "Résumé"
     url: /assets/extras/Sahil-Arora-Resume.pdf
   # - title: "Sample Posts"
