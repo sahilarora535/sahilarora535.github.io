@@ -12,14 +12,14 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 # Site Settings
 locale                   : "en"
 title                    : "sahilarora535"
-title_separator          : "|"
+title_separator          : "-"
 name                     : "Sahil Arora"
 description: >- # this means to ignore newlines until "baseurl:"
   Sahil Arora - Final year B.Tech Undergrad at Indian Institute of Technology Mandi
 url                      : "https://sahilarora535.github.io"
 baseurl                  : # none
 repository               : "sahilarora535/sahilarora535.github.io"
-teaser                   : "/assets/images/teasers.jpg"
+teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 153
 comments:
@@ -81,7 +81,7 @@ social:
 analytics:
   provider               : "google"
   google:
-    tracking_id          : UA-89437062-1
+    tracking_id          : "UA-89437062-1"
 
 
 # Site Author
