@@ -2,6 +2,8 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Résumé"
+    url: /assets/extras/Sahil-Arora-Resume.pdf
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
