@@ -8,12 +8,12 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.6.2"
+# gem "jekyll", "~> 3.6.2"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-# gem "jekyll-remote-theme"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -24,4 +24,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Minimal Mistakes Jekyll theme
-gem "minimal-mistakes-jekyll", "~> 4.8"
+# gem "minimal-mistakes-jekyll", "~> 4.8"
