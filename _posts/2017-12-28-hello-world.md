@@ -4,6 +4,7 @@ categories:
   - Uncategorized
 tags:
   - post
+excerpt: "Hello there, stranger! This is my first post."
 header:
   image: /assets/images/hello-world.jpg
   teaser: /assets/images/hello-world.jpg
