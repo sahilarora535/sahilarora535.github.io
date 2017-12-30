@@ -8,6 +8,7 @@ excerpt: "Hello there, stranger! This is my first post."
 header:
   image: /assets/images/hello-world.jpg
   teaser: /assets/images/hello-world.jpg
+  og_image: /assets/images/hello-world.jpg
 ---
 
 How could my first blog post have some other title than this. This is the de-facto `Lorem Ipsum` which starts one\'s journey as a programmer. ***Remember***, you have to start with **\"Hello, World!\"**.
