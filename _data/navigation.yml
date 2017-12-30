@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Blog"
     url: /blog/
-  - title: Categories
-    url: /categories/
+  - title: "Projects"
+    url: /projects/
   - title: "Résumé"
     url: /assets/extras/Sahil-Arora-Resume.pdf
   - title: "Sitemap"
