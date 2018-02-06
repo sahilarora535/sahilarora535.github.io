@@ -4,9 +4,9 @@ categories:
   - Uncategorized
 tags:
   - post
-excerpt: "Hello there, stranger! This is my first post."
+classes: wide
+excerpt: "Hello there! This is my first post."
 header:
-  image: /assets/images/hello-world.jpg
   teaser: /assets/images/hello-world.jpg
   og_image: /assets/images/hello-world.jpg
 ---
