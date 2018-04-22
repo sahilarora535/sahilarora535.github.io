@@ -1,12 +1,13 @@
 ---
 title: "Hello, World!"
 categories:
-  - Uncategorized
+  - Personal
 tags:
-  - post
+  - "null"
 classes: wide
-excerpt: "Hello there! This is my first post."
+excerpt: "My first post."
 header:
+  overlay_color: "#405471"
   teaser: /assets/images/hello-world.jpg
   og_image: /assets/images/hello-world.jpg
 ---
