@@ -1,3 +1,17 @@
 _site
 .sass-cache
+.jekyll-cache
 .jekyll-metadata
+vendor
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
