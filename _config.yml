@@ -14,21 +14,21 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-GB"
-title                    : "Sahil Arora"
+title                    : &name "Sahil Arora"
 title_separator          : "|"
 subtitle                 : ""
-name                     : "Sahil Arora"
-description              : "Sahil Arora is a problem solver and software engineer based out of India. This is his home on the internet."
-url                      : "https://sahilarora535.github.io"
+name                     : *name
+description              : &description "Sahil Arora is a problem solver and software engineer based out of India. He graduated from Indian Institute of Technology, Mandi with Bachelors in Technology, majoring in Computer Science Engineering."
+url                      : &website "https://sahilarora535.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "sahilarora535/sahilarora535.github.io"
 teaser                   : "/assets/images/teaser.jpg"
-logo                     : "/assets/images/icons/Icon-88.png"
+logo                     : "/assets/images/icons/panda/Icon-196.png"
 words_per_minute         : 200
 comments:
   provider               : "disqus"
   disqus:
-    shortname            : "sahilarora535"
+    shortname            : &username "sahilarora535"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
@@ -42,69 +42,48 @@ algolia:
 
 # Social Sharing
 twitter:
-  username               : sahilarora535
+  username               : *username
 facebook:
-  username               : sahilarora535
-og_image                 : "/assets/images/icons/Icon-1024.png"
+  username               : *username
+og_image                 : "/assets/images/icons/my/Icon-1024.png"
 social:
   type                   : Person
   links: # An array of links to social media profiles
-    - "https://twitter.com/sahilarora535"
-    - "https://www.facebook.com/sahilarora535"
-    - "https://instagram.com/sahilarora535"
-    - "https://www.linkedin.com/in/sahilarora535"
+    - &linkedin https://www.linkedin.com/in/sahilarora535
+    - &github https://github.com/sahilarora535
+    - &twitter https://twitter.com/sahilarora535
+    - &facebook https://www.facebook.com/sahilarora535
+    - &instagram https://instagram.com/sahilarora535
 
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
 
 # Site Author
 author:
-  name             : "Sahil Arora"
-  avatar           : "/assets/images/icons/Icon-1024.png"
-  bio              : "Sahil Arora is a problem solver and a software engineer. He loves to eat a lot and struggles constantly with a fat belly."
+  name             : *name
+  avatar           : "/assets/images/icons/my/Icon-1024.png"
+  bio              : *description
   location         : "Bengaluru, India"
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://sahilarora535.github.io"
+  links:  &links
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/sahilarora535"
+      url: *linkedin
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sahilarora535"
+      url: *github
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/sahilarora535"
+      url: *twitter
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/sahilarora535"
+      url: *facebook
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/sahilarora535"
+      url: *instagram
 
 # Site Footer
 footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/sahilarora535"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/sahilarora535"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/sahilarora535"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/sahilarora535"
-    - label: "Stack Overflow"
-      icon: "fab fa-fw fa-stack-overflow"
-      url: "https://gitlab.com/sahilarora535"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/sahilarora535"
-
+  links: *links
 
 # Reading Files
 include:
@@ -230,6 +209,13 @@ compress_html:
   ignore:
     envs: development
 
+include: ["_pages"]
+
+# Projects collection
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -243,4 +229,25 @@ defaults:
       read_time: true
       comments: true
       share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
       related: true
