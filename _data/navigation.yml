@@ -10,7 +10,7 @@ main:
     url: /assets/extras/Sahil-Arora-Resume.pdf
 
 blog:
-  - title: Post Groups
+  - title: Filter Posts
     children:
       - title: "All Posts"
         url: /blog/
