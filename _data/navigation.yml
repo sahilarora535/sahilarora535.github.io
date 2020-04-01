@@ -18,5 +18,3 @@ blog:
         url: /categories/
       - title: "Posts by Tags"
         url: /tags/
-      - title: "Posts by Collection"
-        url: /collection-archive/
