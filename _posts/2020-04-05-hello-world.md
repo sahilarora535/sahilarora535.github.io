@@ -1,5 +1,5 @@
 ---
-title: "Hello, World!:computer::panda_face:"
+title: "Hello, World!💻🐼"
 excerpt: "Sahil Arora's first blog post on the internet."
 categories: personal
 tags: personal
