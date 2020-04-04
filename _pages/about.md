@@ -3,6 +3,7 @@ permalink: /about/
 title: "About Sahil"
 share: true
 header:
+    overlay_color: "#535353"
     overlay_image: /assets/images/icons/my/overlay.png
 ---
 Sahil is an engineer and problem solver based out of India. He completed his Bachelors in Technology majoring in Computer Science and Engineering from the [Indian Institute of Technology, Mandi](http://iitmandi.ac.in/) in the year 2018.
