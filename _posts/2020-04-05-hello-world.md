@@ -1,8 +1,8 @@
 ---
-title: "Hello, World!💻🐼"
+title: "Hello, World! 💻🐼"
 excerpt: "Sahil Arora's first blog post on the internet."
-categories: personal
-tags: personal
+categories: nil
+tags: nil
 classes: wide
 header:
     overlay_color: "#000"
@@ -21,7 +21,7 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Hello, World!💻🐼")
+    fmt.Println("{{ page.title }}")
 }
 ```
 
