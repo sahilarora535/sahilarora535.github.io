@@ -1,11 +1,11 @@
 ---
 title: "Add PCLm support to cups-filters"
-excerpt: "A Google Summer of Code project to convert documents to the PCLm format via [cups-filters](https://github.com/openprinting/cups-filters)."
+excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2017 project to convert documents to the PCLm format via [rastertopclm](https://github.com/OpenPrinting/cups-filters/blob/master/filter/rastertopclm) filter in [cups-filters](https://github.com/openprinting/cups-filters)."
 toc: true
 toc_label: "Contents"
 toc_sticky: true
 header:
-    teaser: &image https://raw.githubusercontent.com/OpenPrinting/openprinting.github.io/master/assets/images/rotation_pantone.jpg
+    teaser: &image /assets/images/rotation_pantone.jpg
     overlay_color: "#000"
     overlay_filter: "0.5"
     overlay_image: *image
