@@ -56,7 +56,7 @@ There are millions of printers today which are certified by  [Wifi-Direct](https
 
 ## Challenges
 
-The biggest challenge was lack of resources. Since there were no previous implementations of PCLm, everything had to be done from scratch. There was one implementation [here](https://github.com/ibevilinc/WFDSPrintPlugin/tree/master/jni/wprint/plugins/genPCLm/src), but it was an obsolete android application which could not build. Hence, for about one and a half month we had no idea if we could pull it off or not. Also, this implementation was very heavy and would have increased the size of the `CUPS`-filter software by manifolds and would have been extremely unmaintainable.
+The biggest challenge was lack of resources. Since there were no previous implementations of PCLm, everything had to be done from scratch. There was one implementation [here](https://github.com/ibevilinc/WFDSPrintPlugin/tree/master/jni/wprint/plugins/genPCLm/src), but it was an obsolete android application which could not build. Hence, for about one and a half month we had no idea if we could pull it off or not. Also, this implementation was very heavy and would have increased the size of the `cups-filter` software by manifolds and would have been extremely unmaintainable.
 
 Since PCLm was a subset of PDF, we decided we would modify an already existing filter which converts PWG Raster file format to PCLm. The filter was already using [`QPDF`](https://github.com/qpdf/qpdf), hence we decided we would use [`QPDF`](https://github.com/qpdf/qpdf) to do our task. 
 
@@ -74,13 +74,13 @@ The code changes made and features added in this project have made it to `cups-f
 2. My commits in the bazaar repository of `CUPS`-filters can be found her
  - <http://bzr.linuxfoundation.org/loggerhead/openprinting/`CUPS`-filters/changes/7682.1.5>
  - <http://bzr.linuxfoundation.org/loggerhead/openprinting/`CUPS`-filters/changes/7696.1.1>
-3. Since all the development of `CUPS`-filter happens in bazaar and I have chosen git to work with, all the changes in the commits in this repository(except [39aefc](https://github.com/sahilarora535/`CUPS`-filters/commit/39aefcbe6ea2e89f4c4ce7223c7a60f28dae3e71), [d686a9](https://github.com/sahilarora535/`CUPS`-filters/commit/d686a9f66d44a0fb732cad94fc25e376be9f65a1), [ccb47b](https://github.com/sahilarora535/`CUPS`-filters/commit/ccb47b24178fc454713fd7b1051d80c1389db81b) and [964e63](https://github.com/sahilarora535/`CUPS`-filters/commit/964e634fbe6e8a243fdd423d6fd92e1c3c45db33)) have been done by me. You can find the commits here: <https://github.com/sahilarora535/`CUPS`-filters/commits/master>.
+3. Since all the development of `cups-filter` happens in bazaar and I have chosen git to work with, all the changes in the commits in this repository(except [39aefc](https://github.com/sahilarora535/`CUPS`-filters/commit/39aefcbe6ea2e89f4c4ce7223c7a60f28dae3e71), [d686a9](https://github.com/sahilarora535/`CUPS`-filters/commit/d686a9f66d44a0fb732cad94fc25e376be9f65a1), [ccb47b](https://github.com/sahilarora535/`CUPS`-filters/commit/ccb47b24178fc454713fd7b1051d80c1389db81b) and [964e63](https://github.com/sahilarora535/`CUPS`-filters/commit/964e634fbe6e8a243fdd423d6fd92e1c3c45db33)) have been done by me. You can find the commits here: <https://github.com/sahilarora535/`CUPS`-filters/commits/master>.
 4. I also had to make changes to `QPDF` for completing this project. The commit for which can be found here: <https://github.com/qpdf/qpdf/commit/b19210fa7dbab7efa7a3cd65653be4ff2f6e08e9>
 5. To test the code, I created a tool to create some sample PCLm files from raster images. You can also find some saple PCLm files here. This has also been completely written by me, and can be found here: <http://github.com/sahilarora535/raster-to-pclm/>.
 
 ## Footnotes
 
-### `CUPS`-filters
+### cups-filters
 `CUPS`-filters got split out of `CUPS` for `CUPS` version 1.6.x, containing the filters and backends which Apple does not need for Mac OS X and therefore did not want to maintain any more. [Till Kamppeter](https://github.com/tillkamppeter) had overtaken this part as an OpenPrinting project named `CUPS`-filters. He added `CUPS`-browsed as `CUPS` itself did not automatically make remote `CUPS` queues available locally any more. He also took maintainership on all `CUPS` features which Apple has given up. With the time, `CUPS`-filters got improved `CUPS`-filters, especially switched to a PDF-based printing workflow, added legacy `CUPS` broadcasting/browsing, sophisticated filtering of remote printers, auto setup of remote IPP printers, driverless printing, etc., and all the time kept it compatible with new `CUPS` features.
 
 ### Internet Printing Protocol
