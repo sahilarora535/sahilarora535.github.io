@@ -62,17 +62,17 @@ With all these, we are able to correctly replicate all the required functionalit
 
 ## Code Links
 
-### Issues resolved:
+### Issues resolved
 
 1. [bannertopdf should not depend on Poppler #8](https://github.com/OpenPrinting/cups-filters/issues/8)
 2. [PDF forms converted using bannertopdf show gibberish text when the form is edited. #14](https://github.com/OpenPrinting/cups-filters/issues/14)
 3. [Feature request: Higher level abstractions for objects such as forms in a PDF. #178](https://github.com/qpdf/qpdf/issues/178)
 
-### Pull requests created:
+### Pull requests created
 
 1. [Rewrite bannertopdf to use QPDF instead of Poppler #25](https://github.com/OpenPrinting/cups-filters/pull/25)
 
-### Commits:
+### Commits
 
 All the commits can be found in the pull request. Here is the list of commits which are present in the pull-request:
 
