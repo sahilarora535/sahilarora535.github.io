@@ -19,7 +19,7 @@ title_separator          : "|"
 subtitle                 : ""
 name                     : *name
 description              : &description "Sahil Arora is a problem solver and software engineer based out of India. He graduated from Indian Institute of Technology, Mandi with Bachelors in Technology, majoring in Computer Science Engineering."
-url                      : &website "https://sahilarora535.github.io"
+url                      : &website "https://bhaayu.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "sahilarora535/sahilarora535.github.io"
 teaser                   : "/assets/images/teaser.jpg"
