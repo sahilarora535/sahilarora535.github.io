@@ -6,8 +6,6 @@ main:
     url: /blog/
   - title: "Projects"
     url: /projects/
-  - title: "Résumé"
-    url: /assets/extras/Sahil-Arora-Resume.pdf
 
 blog:
   - title: Filter Posts
