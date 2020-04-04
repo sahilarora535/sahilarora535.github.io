@@ -3,6 +3,7 @@ title: "Add PCLm support to cups-filters"
 excerpt: "A Google Summer of Code project to convert documents to the PCLm format via [cups-filters](https://github.com/openprinting/cups-filters)."
 toc: true
 toc_label: "Contents"
+toc_sticky: true
 header:
     teaser: &image https://raw.githubusercontent.com/OpenPrinting/openprinting.github.io/master/assets/images/rotation_pantone.jpg
     overlay_color: "#000"
