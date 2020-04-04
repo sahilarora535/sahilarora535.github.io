@@ -11,4 +11,4 @@ He has been a part of the Open Source Developer Community and has been an active
 
 Sahil currently works at a global investment bank as a Technology Analyst in the Cloud Infrastructure team, managing how engineerings across the company deploy infrastructure to the cloud and follow the best practices. He has great experience with cloud providers, particularly AWS, and tools such as Terraform for Infrastructure as Code and Gitlab for software development lifecycle.
 
-To know more about Sahil or get in touch, please shoot out an email to him at `sahil``arora``535``AT``gmail``DOT``com`.
+To know more about Sahil or get in touch, please shoot out an email to him at `sahil arora 535 [AT] gmail [DOT] com`.
