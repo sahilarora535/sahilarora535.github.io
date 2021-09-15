@@ -53,7 +53,7 @@ social:
     - &github https://github.com/sahilarora535
     - &twitter https://twitter.com/sahilarora535
     - &facebook https://www.facebook.com/sahilarora535
-    - &instagram https://instagram.com/sahilarora535
+    - &instagram https://instagram.com/sahilarora.535
 
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
