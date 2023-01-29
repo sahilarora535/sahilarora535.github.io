@@ -9,7 +9,7 @@
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-remote_theme             : "mmistakes/minimal-mistakes@4.19.1"
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -18,7 +18,7 @@ title                    : &name "Sahil Arora"
 title_separator          : "|"
 subtitle                 : ""
 name                     : *name
-description              : &description "Sahil Arora is a problem solver and software engineer based out of India. He graduated from Indian Institute of Technology, Mandi with Bachelors in Technology, majoring in Computer Science Engineering."
+description              : &description "Hi, I am Sahil, a problem solver and software engineer based out of India. I love food, and working out, and working out while having food(just kidding here). Welcome to my home on the internet. :)"
 url                      : &website "https://www.sahilarora.in"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "sahilarora535/sahilarora535.github.io"
