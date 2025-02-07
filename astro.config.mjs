@@ -7,9 +7,12 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs with Tailwind',
+			title: 'Sahil Arora',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				linkedin: 'https://www.linkedin.com/in/sahilarora535/',
+				github: 'https://github.com/sahilarora535',
+				stackOverflow: 'https://stackoverflow.com/users/4554700/sahil-arora',
+				email: 'mailto:sight-cyclops.0a@icloud.com',
 			},
 			sidebar: [
 				{
