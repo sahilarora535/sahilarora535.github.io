@@ -6,6 +6,7 @@ import starlightBlog from 'starlight-blog';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://sahilarora.in',
 	integrations: [
 		starlight({
 			plugins: [starlightBlog()],
