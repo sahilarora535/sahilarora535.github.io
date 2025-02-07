@@ -10,12 +10,14 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			plugins: [starlightBlog()],
+			favicon: './src/assets/logo/logo-namaste-dark.png',
 			title: 'Sahil Arora',
 			description: 'Sahil Arora\'s personal blog and portfolio',
 			logo: {
 				light: './src/assets/logo/logo-hi-light.png',
 				dark: './src/assets/logo/logo-hi-dark.png',
 			},
+			lastUpdated: true,
 			social: {
 				linkedin: 'https://www.linkedin.com/in/sahilarora535/',
 				github: 'https://github.com/sahilarora535',
