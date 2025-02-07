@@ -14,8 +14,7 @@ export default defineConfig({
 			title: 'Sahil Arora',
 			description: 'Sahil Arora\'s personal blog and portfolio',
 			logo: {
-				light: './src/assets/logo/logo-hi-light.png',
-				dark: './src/assets/logo/logo-hi-dark.png',
+				src: './src/assets/logo/logo-meditate-dark.png',
 			},
 			lastUpdated: true,
 			social: {
