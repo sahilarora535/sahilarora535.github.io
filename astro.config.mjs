@@ -10,12 +10,14 @@ export default defineConfig({
 		starlight({
 			plugins: [starlightBlog()],
 			title: 'Sahil Arora',
+			description: 'Sahil Arora\'s personal blog and portfolio',
 			social: {
 				linkedin: 'https://www.linkedin.com/in/sahilarora535/',
 				github: 'https://github.com/sahilarora535',
 				stackOverflow: 'https://stackoverflow.com/users/4554700/sahil-arora',
 				email: 'mailto:sight-cyclops.0a@icloud.com',
 			},
+			tableOfContents: true,
 			sidebar: [
 				{
 					label: 'Guides',
