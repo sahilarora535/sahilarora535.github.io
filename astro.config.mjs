@@ -36,7 +36,7 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},
 			],
-			customCss: ['./src/tailwind.css'],
+			customCss: ['./src/tailwind.css', '@fontsource/atkinson-hyperlegible/700.css', '@fontsource/atkinson-hyperlegible/400.css'],
 		}),
 		tailwind({ applyBaseStyles: false }),
 	],
