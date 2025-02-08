@@ -28,7 +28,10 @@ export default defineConfig({
             stackOverflow: 'https://stackoverflow.com/users/4554700/sahil-arora',
             email: 'mailto:sight-cyclops.0a@icloud.com',
         },
-        tableOfContents: true,
+        tableOfContents: {
+            minHeadingLevel: 1,
+            maxHeadingLevel: 6,
+        },
         sidebar: [
             {
                 label: 'Guides',
