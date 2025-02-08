@@ -32,7 +32,6 @@ export default defineConfig({
             minHeadingLevel: 1,
             maxHeadingLevel: 6,
         },
-        sidebar: [],
         customCss: ['./src/tailwind.css', '@fontsource/atkinson-hyperlegible/700.css', '@fontsource/atkinson-hyperlegible/400.css'],
 		}), tailwind({ applyBaseStyles: false }), d2()],
 });
