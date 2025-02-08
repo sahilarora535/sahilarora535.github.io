@@ -10,7 +10,11 @@ import d2 from 'astro-d2';
 export default defineConfig({
     site: 'https://sahilarora.in',
     integrations: [starlight({
-        plugins: [starlightBlog()],
+        plugins: [starlightBlog({
+            title: 'Blog',
+            postCount: 10,
+            recentPostCount: 10,
+        })],
         favicon: './src/assets/logo/logo-namaste-dark.png',
         title: 'Sahil Arora',
         description: 'Sahil Arora\'s personal blog and portfolio',
