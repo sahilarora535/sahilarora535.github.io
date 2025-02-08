@@ -32,19 +32,7 @@ export default defineConfig({
             minHeadingLevel: 1,
             maxHeadingLevel: 6,
         },
-        sidebar: [
-            {
-                label: 'Guides',
-                items: [
-                    // Each item here is one entry in the navigation menu.
-                    { label: 'Example Guide', slug: 'guides/example' },
-                ],
-            },
-            {
-                label: 'Reference',
-                autogenerate: { directory: 'reference' },
-            },
-        ],
+        sidebar: [],
         customCss: ['./src/tailwind.css', '@fontsource/atkinson-hyperlegible/700.css', '@fontsource/atkinson-hyperlegible/400.css'],
 		}), tailwind({ applyBaseStyles: false }), d2()],
 });
