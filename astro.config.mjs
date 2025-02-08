@@ -4,8 +4,6 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import starlightBlog from 'starlight-blog';
 
-import d2 from 'astro-d2';
-
 // https://astro.build/config
 export default defineConfig({
     site: 'https://sahilarora.in',
@@ -33,5 +31,5 @@ export default defineConfig({
             maxHeadingLevel: 6,
         },
         customCss: ['./src/tailwind.css', '@fontsource/atkinson-hyperlegible/700.css', '@fontsource/atkinson-hyperlegible/400.css'],
-		}), tailwind({ applyBaseStyles: false }), d2()],
+		}), tailwind({ applyBaseStyles: false })],
 });
