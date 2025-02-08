@@ -4,7 +4,7 @@ description: "Google Summer of Code 2017 Project to add PCLm support to cups-fil
 excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2017 project to convert documents to the PCLm format via [rastertopclm](https://github.com/OpenPrinting/cups-filters/blob/master/filter/rastertopclm) filter in [cups-filters](https://github.com/openprinting/cups-filters)."
 date: 2022-02-05
 tags:
-  - project
+  - Projects
 ---
 
 ## Introduction

@@ -4,7 +4,7 @@ description: "Google Summer of Code 2018 Project to improve bannertopdf to use Q
 excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2018 project to replace unsupported [poppler](https://poppler.freedesktop.org/) APIs with [qpdf](https://github.com/qpdf/qpdf)'s APIs in [bannertopdf](https://github.com/OpenPrinting/cups-filters/blob/master/filter/bannertopdf.c) filter in [cups-filters](https://github.com/openprinting/cups-filters)."
 date: 2022-02-05
 tags:
-  - project
+  - Projects
 ---
 
 ## Introduction
