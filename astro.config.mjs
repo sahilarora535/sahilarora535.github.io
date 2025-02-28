@@ -15,6 +15,14 @@ export default defineConfig({
             postCount: 10,
             recentPostCount: 10,
         })],
+        head: [{
+            tag: 'script',
+            attrs: {
+                src: 'https://cloud.umami.is/script.js',
+                'data-website-id': "6905ce4e-a9b4-4fa2-874b-566b98d63957",
+                defer: true,
+            }
+        }],
         favicon: './src/assets/logo/logo-namaste-dark.png',
         title: 'Sahil Arora',
         description: 'Sahil Arora\'s personal blog and portfolio',
