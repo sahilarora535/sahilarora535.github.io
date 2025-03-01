@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -10,12 +10,13 @@ on:
 # Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
-  pages: write
   id-token: write
+  deployments: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Pages
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
@@ -27,14 +28,11 @@ jobs:
           path: . # The root location of your Astro project inside the repository. (optional)
           node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
           package-manager: npm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: sahilarora-website
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
