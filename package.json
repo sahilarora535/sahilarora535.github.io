@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "sahilarora535.github.io",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.31.1",
@@ -19,5 +20,8 @@
     "sharp": "^0.32.5",
     "starlight-blog": "^0.16.1",
     "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
