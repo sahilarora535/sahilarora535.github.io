@@ -18,6 +18,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.36.0",
     "astro": "^5.14.1",
+    "astro-d2": "^0.8.0",
     "starlight-blog": "^0.24.1"
   }
 }
