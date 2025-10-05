@@ -14,8 +14,6 @@ jobs:
           fetch-depth: 0
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - name: Install commitlint
         run: pnpm add -D @commitlint/cli @commitlint/config-conventional
       - name: Print versions
