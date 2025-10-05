@@ -29,12 +29,12 @@ export default defineConfig({
             src: './src/assets/logo/logo-meditate-dark.png',
         },
         lastUpdated: true,
-        social: {
-            linkedin: 'https://www.linkedin.com/in/sahilarora535/',
-            github: 'https://github.com/sahilarora535',
-            stackOverflow: 'https://stackoverflow.com/users/4554700/sahil-arora',
-            email: 'mailto:sight-cyclops.0a@icloud.com',
-        },
+        social: [
+            { icon: 'github', label: 'GitHub', href: 'https://github.com/sahilarora535' },
+            { icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/sahilarora535/' },
+            { icon: 'stackOverflow', label: 'StackOverflow', href: 'https://stackoverflow.com/users/4554700/sahil-arora' },
+            { icon: 'email', label: 'EMail', href: 'mailto:sight-cyclops.0a@icloud.com' }
+        ],
         tableOfContents: {
             minHeadingLevel: 1,
             maxHeadingLevel: 6,

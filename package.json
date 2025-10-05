@@ -1,26 +1,23 @@
 {
   "name": "sahilarora535.github.io",
-  "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Sahil Arora's website.",
+  "main": "src/content/docs/index.mdx",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "husky"
+    "preview": "astro preview"
   },
+  "keywords": [
+    "blog",
+    "personal-website"
+  ],
+  "author": "Sahil Arora",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
   "dependencies": {
-    "@astrojs/starlight": "^0.31.1",
-    "@fontsource/atkinson-hyperlegible": "^5.1.1",
-    "astro": "^5.1.5",
-    "astro-d2": "^0.7.0",
-    "sharp": "^0.32.5",
-    "starlight-blog": "^0.16.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "husky": "^9.1.7"
+    "@astrojs/starlight": "^0.36.0",
+    "astro": "^5.14.1",
+    "starlight-blog": "^0.24.1"
   }
 }
