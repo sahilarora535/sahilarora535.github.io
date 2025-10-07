@@ -20,6 +20,9 @@ importers:
       astro-d2:
         specifier: ^0.8.0
         version: 0.8.0(astro@5.14.1(@types/node@24.6.2)(rollup@4.52.4)(typescript@5.9.3))
+      sharp:
+        specifier: ^0.34.4
+        version: 0.34.4
       starlight-blog:
         specifier: ^0.24.1
         version: 0.24.1(@astrojs/starlight@0.36.0(astro@5.14.1(@types/node@24.6.2)(rollup@4.52.4)(typescript@5.9.3)))(astro@5.14.1(@types/node@24.6.2)(rollup@4.52.4)(typescript@5.9.3))
@@ -2114,8 +2117,7 @@ snapshots:
 
   '@fontsource/atkinson-hyperlegible@5.2.8': {}
 
-  '@img/colour@1.0.0':
-    optional: true
+  '@img/colour@1.0.0': {}
 
   '@img/sharp-darwin-arm64@0.34.4':
     optionalDependencies:
@@ -2673,8 +2675,7 @@ snapshots:
 
   destr@2.0.5: {}
 
-  detect-libc@2.1.2:
-    optional: true
+  detect-libc@2.1.2: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -3932,7 +3933,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.4
       '@img/sharp-win32-ia32': 0.34.4
       '@img/sharp-win32-x64': 0.34.4
-    optional: true
 
   shiki@3.13.0:
     dependencies:
