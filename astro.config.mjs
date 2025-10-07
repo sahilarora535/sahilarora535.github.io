@@ -39,6 +39,6 @@ export default defineConfig({
             minHeadingLevel: 1,
             maxHeadingLevel: 6,
         },
-        customCss: ['./src/tailwind.css', '@fontsource/atkinson-hyperlegible/700.css', '@fontsource/atkinson-hyperlegible/400.css'],
+        customCss: ['@fontsource-variable/inter'],
         }), d2()],
 });
