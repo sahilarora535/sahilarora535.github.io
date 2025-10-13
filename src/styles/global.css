@@ -5,8 +5,8 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-    --font-sans: 'Inter', serif;
-    --font-mono: 'Fira Code', mono;
+    --font-sans: 'Inter Variable', sans-serif;
+    --font-mono: 'Fira Code Variable', monospace;
     /* Generated accent color palettes. */
     --color-accent-200: #b3c7ff;
     --color-accent-600: #364bff;
