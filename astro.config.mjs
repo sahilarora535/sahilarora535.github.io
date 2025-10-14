@@ -17,35 +17,14 @@ export default defineConfig({
           postCount: 10,
           recentPostCount: 10,
       })],
-      head: [
-        {
+      head: [{
           tag: 'script',
           attrs: {
               src: 'https://cloud.umami.is/script.js',
               'data-website-id': "6905ce4e-a9b4-4fa2-874b-566b98d63957",
               defer: true,
-          },
-        },
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://giscus.app/client.js',
-            "data-repo": "sahilarora535/sahilarora535.github.io",
-            "data-repo-id": "MDEwOlJlcG9zaXRvcnk3NzMyODQ2Nw==",
-            "data-category": "Announcements",
-            "data-category-id": "DIC_kwDOBJvwU84Cwn6Q",
-            "data-mapping": "pathname",
-            "data-strict": "1",
-            "data-reactions-enabled": "1",
-            "data-emit-metadata": "0",
-            "data-input-position": "top",
-            "data-theme": "preferred_color_scheme",
-            "data-lang": "en",
-            "crossorigin": "anonymous",
-            "async": true,
           }
-        }
-      ],
+      }],
       favicon: './src/assets/logo/logo-namaste-dark.png',
       title: 'Sahil Arora',
       description: 'Sahil Arora\'s personal blog and portfolio',
