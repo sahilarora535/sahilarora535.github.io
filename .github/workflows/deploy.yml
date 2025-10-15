@@ -10,6 +10,7 @@ on:
 # Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
+  deployments: write
   pages: write
   id-token: write
 
@@ -25,6 +26,12 @@ jobs:
         uses: withastro/action@v4
         with:
           node-version: 22
+      - name: Upload dist directory for other deployments
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+          retention-days: 1
 
   deploy:
     needs: build
@@ -36,3 +43,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  
+  deploy_pages:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download dist directory
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist/ --project-name=sahilarora-in
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
