@@ -5,8 +5,8 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-    --font-sans: 'Inter Variable', sans-serif;
-    --font-mono: 'Fira Code Variable', monospace;
+  --font-sans: 'Inter Variable', sans-serif;
+  --font-mono: 'Fira Code Variable', monospace;
   /* Your preferred accent color. blue is closest to Starlight’s defaults. */
   --color-accent-50: var(--color-blue-50);
   --color-accent-100: var(--color-blue-100);
