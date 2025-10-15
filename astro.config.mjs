@@ -25,7 +25,7 @@ export default defineConfig({
               defer: true,
           }
       }],
-      favicon: './src/assets/logo/logo-namaste-dark.png',
+      favicon: '/logo-meditate-dark.png',
       title: 'Sahil Arora',
       description: 'Sahil Arora\'s personal blog and portfolio',
       logo: {
