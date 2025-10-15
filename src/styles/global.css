@@ -47,3 +47,34 @@ header {
   border-color: color-mix(in srgb, var(--sl-color-hairline-shade) 50%, transparent);
   border-bottom-width: 0.125rem;
 }
+
+/* Custom button styling */
+.sl-link-button.primary {
+  box-shadow: 0.25rem 0.25rem 0 var(--color-blue-700) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Light theme shadow */
+:root[data-theme="light"] .sl-link-button.primary {
+  box-shadow: 0.25rem 0.25rem 0 var(--color-zinc-950) !important;
+}
+
+/* Hover effects */
+.sl-link-button.primary:hover {
+  transform: translate(-0.0625rem, -0.0625rem) !important;
+  box-shadow: 0.375rem 0.375rem 0 var(--color-blue-700) !important;
+}
+
+:root[data-theme="light"] .sl-link-button.primary:hover {
+  box-shadow: 0.375rem 0.375rem 0 var(--color-zinc-950) !important;
+}
+
+/* Active/pressed state */
+.sl-link-button.primary:active {
+  transform: translate(0.0625rem, 0.0625rem) !important;
+  box-shadow: 0.125rem 0.125rem 0 var(--color-blue-700) !important;
+}
+
+:root[data-theme="light"] .sl-link-button.primary:active {
+  box-shadow: 0.125rem 0.125rem 0 var(--color-zinc-950) !important;
+}
