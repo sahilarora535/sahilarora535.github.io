@@ -42,7 +42,7 @@ export default defineConfig({
           minHeadingLevel: 1,
           maxHeadingLevel: 6,
       },
-      customCss: ['./src/styles/global.css', '@fontsource-variable/inter', '@fontsource-variable/fira-code'],
+      customCss: ['./src/styles/global.css', '@fontsource-variable/inter', '@fontsource-variable/fira-code', '@fontsource/bbh-sans-bogle'],
       }), d2()],
 
   vite: {

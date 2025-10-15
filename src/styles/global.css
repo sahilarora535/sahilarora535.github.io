@@ -7,6 +7,7 @@
 @theme {
   --font-sans: 'Inter Variable', sans-serif;
   --font-mono: 'Fira Code Variable', monospace;
+  --font-title: 'BBH Sans Bogle', sans-serif;
   /* Your preferred accent color. blue is closest to Starlight’s defaults. */
   --color-accent-50: var(--color-blue-50);
   --color-accent-100: var(--color-blue-100);
@@ -31,4 +32,11 @@
   --color-gray-800: var(--color-zinc-800);
   --color-gray-900: var(--color-zinc-900);
   --color-gray-950: var(--color-zinc-950);
+}
+
+/* Site title font styling */
+.site-title span {
+  font-family: var(--font-title);
+  font-weight: 200;
+  font-size: 1.535em;
 }
