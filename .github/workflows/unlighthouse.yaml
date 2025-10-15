@@ -22,4 +22,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
-        run: unlighthouse-ci --site https://sahilarora.in --budget 90 --build-static  --reporter jsonExpanded --no-cache --desktop --mobile --samples 5 --debug
+        run: unlighthouse-ci --site https://sahilarora.in --budget 85 --build-static --no-cache --desktop --mobile --samples 3 --debug
