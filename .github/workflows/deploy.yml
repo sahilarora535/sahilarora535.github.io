@@ -58,6 +58,20 @@ jobs:
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
         run: unlighthouse-ci --config-file unlighthouse-desktop.config.ts --debug --reporter csv
+      - name: List directory
+        run: ls -ltra
+      - name: Upload unlighthouse static builds
+        uses: actions/upload-artifact@v4
+        with:
+          name: unlighthouse-build-desktop
+          path: .unlighthouse
+          retention-days: 7
+      - name: Upload ci-report for analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-report-desktop
+          path: .unlighthouse/ci-result.csv
+          retention-days: 7
 
   unlighthouse_mobile:
     needs: deploy
@@ -73,3 +87,17 @@ jobs:
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
         run: unlighthouse-ci --config-file unlighthouse-mobile.config.ts --debug --reporter csv
+      - name: List directory
+        run: ls -ltra
+      - name: Upload unlighthouse static builds
+        uses: actions/upload-artifact@v4
+        with:
+          name: unlighthouse-build-mobile
+          path: .unlighthouse
+          retention-days: 7
+      - name: Upload ci-report for analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-report-mobile
+          path: .unlighthouse/ci-result.csv
+          retention-days: 7

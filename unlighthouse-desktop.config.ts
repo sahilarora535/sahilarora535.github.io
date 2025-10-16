@@ -5,7 +5,7 @@ export default defineUnlighthouseConfig({
   site: 'https://sahilarora.in',
   scanner: {
     device: 'desktop',
-    samples: 3,
+    samples: 1,
   },
   ci: {
     buildStatic: true,
