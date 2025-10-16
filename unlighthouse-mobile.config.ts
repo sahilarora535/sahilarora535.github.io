@@ -4,7 +4,7 @@ export default defineUnlighthouseConfig({
   site: 'https://www2.sahilarora.in',
   scanner: {
     device: 'mobile',
-    samples: 1,
+    samples: 3,
   },
   debug: true,
 })
