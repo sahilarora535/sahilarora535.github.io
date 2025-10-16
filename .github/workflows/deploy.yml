@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unlighthouse-build-desktop
-          path: .unlighthouse
+          path: .unlighthouse/
           retention-days: 7
       - name: Upload ci-report for analysis
         uses: actions/upload-artifact@v4
@@ -93,7 +93,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unlighthouse-build-mobile
-          path: .unlighthouse
+          path: .unlighthouse/
           retention-days: 7
       - name: Upload ci-report for analysis
         uses: actions/upload-artifact@v4
