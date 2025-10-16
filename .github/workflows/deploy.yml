@@ -64,6 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unlighthouse-build-desktop
+          include-hidden-files: true
           path: .unlighthouse/
           retention-days: 7
       - name: Upload ci-report for analysis
@@ -72,6 +73,7 @@ jobs:
           name: ci-report-desktop
           path: .unlighthouse/ci-result.csv
           retention-days: 7
+          compression-level: 0
 
   unlighthouse_mobile:
     needs: deploy
@@ -93,6 +95,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unlighthouse-build-mobile
+          include-hidden-files: true
           path: .unlighthouse/
           retention-days: 7
       - name: Upload ci-report for analysis
@@ -101,3 +104,4 @@ jobs:
           name: ci-report-mobile
           path: .unlighthouse/ci-result.csv
           retention-days: 7
+          compression-level: 0
