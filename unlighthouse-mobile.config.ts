@@ -1,4 +1,3 @@
-import { concurrency } from 'sharp'
 import { defineUnlighthouseConfig } from 'unlighthouse/config'
 
 export default defineUnlighthouseConfig({
