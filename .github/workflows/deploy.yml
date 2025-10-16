@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -11,7 +11,6 @@ on:
 permissions:
   contents: read
   deployments: write
-  pages: write
   id-token: write
 
 jobs:
@@ -33,7 +32,7 @@ jobs:
           path: ./dist
           retention-days: 1
   
-  deploy_pages:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -51,7 +50,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
   unlighthouse_desktop:
-    needs: deploy_pages
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
@@ -82,7 +81,7 @@ jobs:
           compression-level: 0
 
   unlighthouse_mobile:
-    needs: deploy_pages
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
@@ -111,3 +110,37 @@ jobs:
           path: .unlighthouse/ci-result.csv
           retention-days: 7
           compression-level: 0
+
+  deploy_unlighthouse_desktop:
+    needs: unlighthouse_desktop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download unlighthouse directory
+        uses: actions/download-artifact@v4
+        with:
+          name: unlighthouse-build-desktop
+          path: unlighthouse
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy unlighthouse/ --project-name=desktop-inspect-sahilarora-in
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy_unlighthouse_mobile:
+    needs: unlighthouse_mobile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download unlighthouse directory
+        uses: actions/download-artifact@v4
+        with:
+          name: unlighthouse-build-mobile
+          path: unlighthouse
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy unlighthouse/ --project-name=mobile-inspect-sahilarora-in
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
