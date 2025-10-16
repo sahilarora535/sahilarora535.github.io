@@ -6,8 +6,5 @@ export default defineUnlighthouseConfig({
     device: 'desktop',
     samples: 1,
   },
-  ci: {
-    buildStatic: true,
-  },
   debug: true,
 })

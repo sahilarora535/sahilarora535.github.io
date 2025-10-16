@@ -57,7 +57,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
-        run: unlighthouse-ci --config-file unlighthouse-desktop.config.ts --debug --reporter csv
+        run: unlighthouse-ci --config-file unlighthouse-desktop.config.ts --debug --reporter csv --build-static
       - name: List directory
         run: ls -ltra
       - name: Upload unlighthouse static builds
@@ -86,7 +86,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
-        run: unlighthouse-ci --config-file unlighthouse-mobile.config.ts --debug --reporter csv
+        run: unlighthouse-ci --config-file unlighthouse-mobile.config.ts --debug --reporter csv --build-static
       - name: List directory
         run: ls -ltra
       - name: Upload unlighthouse static builds
