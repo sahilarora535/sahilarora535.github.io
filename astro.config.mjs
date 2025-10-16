@@ -9,7 +9,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sahilarora.in',
+  site: 'https://www2.sahilarora.in',
 
   integrations: [
     starlight({
