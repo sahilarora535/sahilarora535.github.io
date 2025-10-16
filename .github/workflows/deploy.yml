@@ -61,7 +61,7 @@ jobs:
           command: pages deploy dist/ --project-name=sahilarora-in
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
-  unlighthouse:
+  unlighthouse_desktop:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
@@ -72,10 +72,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
-        run: unlighthouse-ci --site https://sahilarora.in --budget 85 --build-static --no-cache --desktop --mobile --samples 3 --debug
+        run: unlighthouse-ci --config-file unlighthouse-desktop.config.ts
 
-  unlighthouse_pages:
-    needs: deploy_pages
+  unlighthouse_mobile:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Install pnpm
@@ -85,4 +85,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
       - name: Run Unlighthouse
-        run: unlighthouse-ci --site https://sahilarora-in.pages.dev --budget 85 --build-static --no-cache --desktop --mobile --samples 3 --debug
+        run: unlighthouse-ci --config-file unlighthouse-mobile.config.ts
