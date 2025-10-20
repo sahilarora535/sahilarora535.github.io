@@ -23,7 +23,7 @@
     "@fontsource/bbh-sans-bogle": "^5.2.1",
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
-    "astro-d2": "^0.8.0",
+    "astro-d2": "^0.8.1",
     "sharp": "^0.34.4",
     "starlight-blog": "^0.24.1",
     "tailwindcss": "^4.1.14"
