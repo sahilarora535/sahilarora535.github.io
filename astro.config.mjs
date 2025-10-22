@@ -18,7 +18,6 @@ export default defineConfig({
           recentPostCount: 10,
           metrics: {
             readingTime: true,
-            words: 'total',
           },
       })],
       head: [{
