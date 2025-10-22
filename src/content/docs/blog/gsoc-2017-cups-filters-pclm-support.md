@@ -5,6 +5,8 @@ excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2017 proj
 date: 2022-02-05
 tags:
   - Projects
+  - Work
+  - Google Summer of Code
 ---
 
 ## Introduction

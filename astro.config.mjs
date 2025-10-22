@@ -16,6 +16,10 @@ export default defineConfig({
           title: 'Blog',
           postCount: 10,
           recentPostCount: 10,
+          metrics: {
+            readingTime: true,
+            words: 'total',
+          },
       })],
       head: [{
           tag: 'script',
