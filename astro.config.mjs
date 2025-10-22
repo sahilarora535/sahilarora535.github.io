@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 
-import d2 from 'astro-d2';
+import astroD2 from 'astro-d2';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -11,7 +11,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://sahilarora.in',
 
-  integrations: [starlight({
+  integrations: [
+    starlight({
       plugins: [starlightBlog({
           title: 'Blog',
           postCount: 10,
@@ -46,7 +47,11 @@ export default defineConfig({
           maxHeadingLevel: 6,
       },
       customCss: ['./src/styles/global.css', '@fontsource-variable/inter', '@fontsource-variable/fira-code', '@fontsource/bbh-sans-bogle'],
-      }), d2()],
+      }),
+    astroD2({
+      layout: 'elk',
+      sketch: true,
+    })],
 
   vite: {
     plugins: [tailwindcss()],
