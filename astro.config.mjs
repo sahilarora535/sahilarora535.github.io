@@ -13,6 +13,7 @@ export default defineConfig({
 
   integrations: [
     starlight({
+      pagination: false,
       plugins: [starlightBlog({
           title: 'Blog',
           postCount: 10,
