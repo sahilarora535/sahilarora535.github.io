@@ -53,6 +53,7 @@ export default defineConfig({
     astroD2({
       layout: 'elk',
       sketch: true,
+      pad: 21,
     }),
     mermaid(),
   ],
