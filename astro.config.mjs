@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 
 import astroD2 from 'astro-d2';
+import mermaid from 'astro-mermaid';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -52,7 +53,9 @@ export default defineConfig({
     astroD2({
       layout: 'elk',
       sketch: true,
-    })],
+    }),
+    mermaid(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],
