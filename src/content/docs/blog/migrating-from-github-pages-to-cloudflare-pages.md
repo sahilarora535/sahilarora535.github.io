@@ -1,7 +1,7 @@
 ---
 title: "Migrating from Github Pages to Cloudflare Pages"
-description: "Migrating this website from **Github Pages** to **Cloudflare Pages**, how to, and why."
-excerpt: "Migrating this website from **Github Pages** to **Cloudflare Pages**, how to, and why."
+description: "A guide on migrating a website from GitHub Pages to Cloudflare Pages, covering the reasons and the process."
+excerpt: "This post details the why and how of moving a website from GitHub Pages to Cloudflare Pages, including setup and performance comparisons."
 date: 2025-10-22
 tags:
   - Work

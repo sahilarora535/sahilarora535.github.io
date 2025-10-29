@@ -1,7 +1,7 @@
 ---
 title: "Add PCLm support to cups-filters"
-description: "Google Summer of Code 2017 Project to add PCLm support to cups-filters in Linux."
-excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2017 project to convert documents to the PCLm format via [rastertopclm](https://github.com/OpenPrinting/cups-filters/blob/master/filter/rastertopclm) filter in [cups-filters](https://github.com/openprinting/cups-filters)."
+description: "My GSoC 2017 project to add PCLm support to cups-filters for driverless printing on Linux."
+excerpt: "A summary of my Google Summer of Code 2017 project, which brought PCLm support to Linux's printing system for modern, driverless printers."
 date: 2022-02-05
 tags:
   - Projects

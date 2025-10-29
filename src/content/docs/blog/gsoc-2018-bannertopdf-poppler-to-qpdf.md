@@ -1,7 +1,7 @@
 ---
 title: "Improving bannertopdf filter to use QPDF instead of Poppler APIs"
-description: "Google Summer of Code 2018 Project to improve bannertopdf to use QPDF instead of Poppler APIs"
-excerpt: "[Google Summer of Code](https://summerofcode.withgoogle.com) 2018 project to replace unsupported [poppler](https://poppler.freedesktop.org/) APIs with [qpdf](https://github.com/qpdf/qpdf)'s APIs in [bannertopdf](https://github.com/OpenPrinting/cups-filters/blob/master/filter/bannertopdf.c) filter in [cups-filters](https://github.com/openprinting/cups-filters)."
+description: "My GSoC 2018 project to replace Poppler with QPDF in CUPS' bannertopdf filter."
+excerpt: "A summary of my Google Summer of Code 2018 project, where I replaced the unsupported Poppler dependency with QPDF in the bannertopdf filter in CUPS."
 date: 2022-02-05
 tags:
   - Projects
