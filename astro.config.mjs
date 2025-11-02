@@ -31,7 +31,7 @@ export default defineConfig({
               defer: true,
           }
       }],
-      favicon: '/logo-meditate-dark.png',
+      favicon: '/favicon.ico',
       title: 'Sahil Arora',
       description: 'Sahil Arora\'s personal blog and portfolio',
       logo: {
