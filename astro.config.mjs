@@ -54,6 +54,7 @@ export default defineConfig({
       layout: 'elk',
       sketch: true,
       pad: 21,
+      appendix: true,
     }),
     mermaid(),
   ],
