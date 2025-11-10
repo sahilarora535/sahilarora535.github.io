@@ -27,7 +27,7 @@
     "astro-mermaid": "^1.1.0",
     "mermaid": "^11.12.1",
     "sharp": "^0.34.4",
-    "starlight-blog": "^0.24.3",
+    "starlight-blog": "^0.25.0",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
