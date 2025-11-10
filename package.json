@@ -21,7 +21,7 @@
     "@fontsource-variable/fira-code": "^5.2.7",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/bbh-sans-bogle": "^5.2.1",
-    "@tailwindcss/vite": "^4.1.16",
+    "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.15.2",
     "astro-d2": "^0.8.1",
     "astro-mermaid": "^1.1.0",
