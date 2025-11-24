@@ -1,0 +1,185 @@
+---
+title: "Migrating from Github Pages to Cloudflare Pages"
+description: "A guide on migrating a website from GitHub Pages to Cloudflare Pages, covering the reasons and the process."
+excerpt: "This post details the why and how of moving a website from GitHub Pages to Cloudflare Pages, including setup and performance comparisons."
+date: 2025-10-22
+tags:
+  - Work
+---
+
+[This website](https://www.sahilarora.in "Sahil Arora's website") of mine has been historically hosted on [Github Pages](https://docs.github.com/en/pages), and it's been more that 5 years since the first time I deployed a Jekyll-based static site with a theme which I found most featureful, comments, blogs, tags, social icons, categories, search powered by Algolia, dark and light theme, ability to add interactive content, every(almost) feature a blog can have. And all I had was one blog post, `Hello, World!` was what I named it. I was fresh into my career then, and I thought that if I create a wonderful feature-filled website, the visitors would be amazed.
+
+Then I came across a lot of super interesting posts, websites of people who barely had any taste in styling their blogs, websites which looked like they were made with minimal effort. Then I read those posts, and the styling disappeared. Whether the website had a sidebar or not disappeared, comments section - poof. And I realized that what you write matters more that where you write it. So I started writing. I don't usually write here, but have an on-off relationship with Obsidian, a note-taking app. Although my current website still has a handful of posts, I write. An with this learning that **content is greater than styling**, I decided of publishing my thoughts more often. With this thought in mind, I revamped this website sometime back, removed unnecessary features, made it as simple as I could. And very lately, I moved off hosting this website from Github Pages to Cloudflare pages. Here's how, and why.
+
+## The Basics
+
+Let me explain to you how Github Pages works. Essentially, what you see is a collection of `HTML`, `CSS` and `Javascript` files. What Github allows you to do is you provide them these files, and it will host it somewhere for free(till the time you are under your quotas), and gives you a URL. Anyone who has the URL can access your website. It's dead simple. As per their official documentation:
+
+> *GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.*
+
+Now you could have a single HTML file, you could use a framework, you could use a static site generator like this website does(Jekyll previously, Astro currently). Till the time you can generate a set of static assets and you don't need a server to run the website, Github will host it for you.
+
+
+## Why Github Pages
+
+1. Github Pages is simple.
+2. It gives you the ability to make your mark on the internet for free.
+3. It let's you tie it to your own domain.
+
+## Why move
+
+### Public repository requirement
+
+Github Pages is indeed simple, and it just works! There were no major reasons for me to move. However, in all this time, one thing about Github Pages has irked me more than an - that the source code of this website has to be public for me to use Github Pages:
+
+![Public Profile tag with the repository](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/01.png).
+
+I did not want to have my website's source code open for these are my thoughts. I am a big proponent for Open Source, but there is no point in me having to keep my personal website public just to use Github Pages. As per Github:
+
+![Github's Limits of Github Pages](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/02.png)
+
+Github lauched Github Pages in 2008, and Github Actions in 2018. In this time, there have been multiple competitors like Cloudflare Pages, Netlify, Gitlab Pages and so many. All of them allow you to do the same thing - give them your static site, and the host it for free(quotas, again), and you get back a URL which you can share wherever you want to. You can even host the same static website on S3/GCS/R2 or such services for free(yes, quotas apply).
+
+### Using Github Actions
+
+Github Actions are Github's CI/CD platform which allow you to run custom workflows in your repository. In the previous setup of relying on Github to host the websites, I had lesser flexibility and control over what's being hosted. For instance, I could not run custom build commands, run pre/post steps after the build etc. I wanted this flexibility to have better control on the content of my website. For instance, I prefer using `d2` for diagrams in my posts, but that requires me to have the `d2` binary installed in the system where the `build` is running.
+
+Moreover, if I could have more control over the build phase, the deployment phase as we realized, was super easy. If in the future the provider where I have hosted my website does not suit my requirements anymore, I can just amend the deployment step to deploy to the new destination. Here is how my current deployment pipeline looks like(as generated using `d2`):
+
+```d2
+direction: right
+d: deploy {tooltip: This is the step where the static site is deployed to provider of choice - Github Pages/Cloudflare/...}
+cs: post-deployment {tooltip: Custom post-deployment step}
+b: build {tooltip: This is where the website is compiled and built to a set of static files ready to be hosted}
+b -> d -> cs {style.animated: true}
+```
+
+## Why Cloudflare Pages
+
+Now that we have established that putting a website on the internet is dead-simple, we need a hosting provider which:
+
+- [ ] is simple without any surprises
+- [ ] has good enough quotas
+- [ ] can support custom domains
+- [ ] can support deployment from anywhere, including private Github repositories
+- [ ] is fast
+
+With some searching, I found out that Cloudflare is a worthy contender to Github Pages, and ticked all the above boxes for me, but one. I needed to check whether it's as fast as it claims or not, or atleast faster that Github Pages. Although while reading till here, both you and I are on the same page that it wouldn't really matter. Most of the providers would be competing to give a fairly good experience, and there is no point in optimizing latency for a personal blog which has a handful posts and barely a thousand visitors in an entire year:
+
+![Visitors in an year for sahilarora.in](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/03.png)
+
+But I wanted to check! 😋
+
+## The Great Migration
+
+Now that we have established that Cloudflare is a worthy contender, we start migrating the website to Cloudflare.
+
+### Spinning up a copy
+
+The first step is creating a copy of the current website in a way which doesn't disrupt the current setup, because what if one of the thousand visitors decides to show up on the website and say hi? We want it highly available.
+
+Just kidding, we need to run performance tests on both deployments of the website, and this would be helpful to compare. So we create new a new branch in our Github Actions and configure the new branch to deploy the website to Cloudflare. So here is how are CI pipeline looks like:
+
+```d2
+direction: right
+d: deploy to cloudflare pages
+b: build
+b -> d {style.animated: true}
+```
+
+TADA 🎉! The website is live at [sahilarora-in.pages.dev](https://sahilarora-in.pages.dev). It's absolute the same as the current one, albeit with a different URL, which we'll fix in the next step.
+
+### Understanding Current DNS Configuration
+
+Now we want our domain `https://sahilarora.in` to point to `https://sahilarora-in.pages.dev`. But there is one slight problem: 
+
+1. `sahilarora.in` is an APEX domain, or simply put, the root domain. For APEX domains, we can only set `A` / `AAAA` / `ALIAS` / `ANAME` records. Basically, we need a hard-coded IP address to point to `sahilarora.in`. If we run `dig sahilarora.in` to query DNS record, we get the following:
+
+```text
+; <<>> DiG 9.10.6 <<>> sahilarora.in
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51834
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;sahilarora.in.                 IN      A
+
+;; ANSWER SECTION:
+sahilarora.in.          600     IN      A       185.199.108.153
+sahilarora.in.          600     IN      A       185.199.111.153
+sahilarora.in.          600     IN      A       185.199.109.153
+sahilarora.in.          600     IN      A       185.199.110.153
+
+;; Query time: 10 msec
+;; SERVER: 192.168.0.1#53(192.168.0.1)
+;; WHEN: Sun Nov 02 13:03:13 IST 2025
+;; MSG SIZE  rcvd: 106
+```
+There are four IP addresses linked to `sahilarora.in`, and these IP addresses come from [Github Pages' documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain): ![Github Pages DNS Config](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/04.png). With Namecheap as my DNS provider, here is how the DNS configuration looks like for Github Pages on `https://sahilarora.in`: ![Namecheap configuration for Github Pages](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/05.png).
+
+Now that is a lot of records. What's happening behind the scenes is that all Github Pages have the same set of IP addresses, and Github has a mapping of which URL maps to which pages. It then shows you the correct website. However, this is a lot of configuration.
+
+If you see the last record in the image:
+
+```
+www.sahilarora.in.      600     IN      CNAME   sahilarora535.github.io.
+```
+This basically says that `www.sahilarora.in` should point to `sahilarora535.github.io`. And what happens when we hit `sahilarora535.github.io`:
+
+```
+; <<>> DiG 9.10.6 <<>> sahilarora535.github.io
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6513
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;sahilarora535.github.io.       IN      A
+
+;; ANSWER SECTION:
+sahilarora535.github.io. 600    IN      A       185.199.108.153
+sahilarora535.github.io. 600    IN      A       185.199.110.153
+sahilarora535.github.io. 600    IN      A       185.199.111.153
+sahilarora535.github.io. 600    IN      A       185.199.109.153
+```
+The same IPs. Let's see what happens in the browser:
+
+![Network request to `sahilarora.github.io`](../../../assets/blog/migrating-from-github-pages-to-cloudflare-pages/07.png)
+
+Github Pages knows that `https://sahilarora535.github.io` must be redirected to `https://sahilarora.in`, and it returns a `301 Permanently Moved` response to let the browser know to redirect to `https://sahilarora.in`.
+
+### Setting up DNS for Cloudflare Pages
+
+Now that the copy of our website is up on 
+```text
+; <<>> DiG 9.10.6 <<>> www2.sahilarora.in
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46565
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;www2.sahilarora.in.            IN      A
+
+;; ANSWER SECTION:
+www2.sahilarora.in.     600     IN      CNAME   sahilarora-in.pages.dev.
+sahilarora-in.pages.dev. 300    IN      A       172.66.44.136
+sahilarora-in.pages.dev. 300    IN      A       172.66.47.120
+```
+
+## Lighthouse, Page Speed Insights, and Unlighthouse
+
+Now to test the performance o
+
+## Results
+
+### DNS resolution
+
+### Performance
