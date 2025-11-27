@@ -1,6 +1,6 @@
 ---
 title: "The Great Manager"
-description: "A reflection on the qualities that define a great manager in the tech industry, inspired by years of personal experience."
+description: "A reflection on the qualities that define a great manager, inspired by personal experience."
 excerpt: "What separates a good manager from a great one? This article explores the indispensable role of managers and breaks down the key attributes—from providing stability and scoping work to acting as a partner—that empower teams and foster individual growth."
 date: 2025-11-28
 tags:
