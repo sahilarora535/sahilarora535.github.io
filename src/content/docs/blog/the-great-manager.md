@@ -9,11 +9,11 @@ head:
   - tag: meta
     attrs:
       property: og:image
-      content: /og/blog/the-great-manager.png
+      content: https://www.sahilarora.in/og/blog/the-great-manager.png
   - tag: meta
     attrs:
       name: twitter:image
-      content: /og/blog/the-great-manager.png
+      content: https://www.sahilarora.in/og/blog/the-great-manager.png
 ---
 
 It's just after midnight on November 28, 2025, as I write this. Today is officially my last working day at [ThoughtSpot](https://www.thoughtspot.com/). In my eight years as a software engineer, I've progressed from an intern to a senior role, completing what I estimate to be about 23% of my professional career. While that may not sound like much compared to the long road ahead, I have worked as an intern at an early-stage startup, a junior engineer at a bank and a MAANG company, a mid-level engineer at another MAANG, and a senior engineer at a mid-stage company. In all this time, I have reported to 14 different managers—a new one every seven months on average. This high number, despite this being only my fourth company, is a result of organizational restructuring, managers leaving, team switches, and promotions.
