@@ -57,6 +57,8 @@ A great manager will also regularly assign you work you are not good at. For ins
 
 A great manager ensures that the ratio of the work you like, the work you are good at, the work you don't like, and the work you are not good at is balanced in a way that you feel consistent and get better. A great manager will make sure you become a better overall contributor.
 
+![Scoping work](../../../assets/blog/the-great-manager/scope.png)
+
 ### Treats you like a human
 
 Human productivity might look consistent or smooth if you look at longer time frames like quarters or months. For instance, you might say you worked more and better this year than last year. But when it comes to daily productivity, it can vary significantly. You might get sick, have a personal event, prepare for a social or family gathering, plan a vacation, feel a lack of motivation, or have to repair your car. A great manager understands that you are human and that this is normal. They will ensure you are improving over the long term while making sure that small productivity blips don't derail you or your progress. They will also promote consistency and discourage fads like 70-hour workweeks or late-night work. If you have to commit to such long hours temporarily, they will make sure to compensate by giving you time to recharge.
@@ -67,29 +69,43 @@ Human productivity might look consistent or smooth if you look at longer time fr
 
 There will be times when there is more work for the team than there is bandwidth, and everyone is stretched and tired. A great manager will not hesitate to get their hands dirty and act as a partner. They will take on trivial tasks to reduce context switching and ensure the team can work with maximum momentum. They might handle trivial bugs and take up work cycles on less important tasks.
 
+![Acting like a partner](../../../assets/blog/the-great-manager/partner.png)
+
 ### Provides the right feedback at the right time
 
 Every team member will have different strengths: one might be a great planner, another a great communicator, and a third great at execution. One might be less vocal, while another is an extrovert. One might be a quick learner, while another is slower. A great manager recognizes each report's weaknesses and gives them feedback in a way they can digest and work on. They will ensure growth for both the team and the individual.
+
+![Providing feedback](../../../assets/blog/the-great-manager/feedback.png)
 
 ### Trusts, and verifies if required
 
 Trust builds over time. When you report to a great manager, they don't start trusting you on day one. They will analyze what you are good at and what you are not, and slowly begin to trust you and your work. As your work and scope grow, trust deepens, and when that happens, the manager starts to take a step back. This shows they trust you, and now the manager can focus on other problems.
 
+![Building trust](../../../assets/blog/the-great-manager/11.png)
+
 ### Acts like a leader when required
 
 There will be times when there is ambiguity in the air, when the solution isn't clear and the direction looks murky. In those cases, a great manager steps up and makes a call. They might descope parts of the problem or ask to go a certain way with calculated risk, but if required, they can act like a leader.
+
+![Acting like a leader](../../../assets/blog/the-great-manager/leader.png)
 
 ### Provides stability
 
 Every manager has a different style, and when the manager or the organization changes, a lot can change. Projects might get reshuffled, people might be moved, and business priorities might shift. In all of this, if you are lucky enough to have the same great manager, they will try to ensure the impact of this change on your work is minimal.
 
+![Manager providing stability](../../../assets/blog/the-great-manager/stability.png)
+
 ### Is your cheer-leader
 
 A great manager will also be your personal cheerleader. They will ensure that your good qualities are clearly reflected where they need to be, such as in promotion discussions or in front of leadership and stakeholders. They will make sure that any negative impressions of you are understood and acknowledged, and that feedback is given to ensure corrections can be made. A great manager will mostly act as a cheerleader for you in public and work on your shortcomings in private.
 
+![Cheer leader](../../../assets/blog/the-great-manager/cheer.png)
+
 ### Is human
 
 And in the end, managers are human, and like every other human, they will make mistakes. They might misjudge, over-trust someone, or underestimate tasks. They might hire the wrong candidate or fail to get stakeholders on the same page. They can make any kind of mistake that another employee can make. But a great manager will ensure they learn from their mistakes. A great manager will not shy away from conversations and will ask for feedback if required. They will ensure that they become better as well.
+
+![Human manager](../../../assets/blog/the-great-manager/human.png)
 
 ## Acknowledgements
 
