@@ -120,6 +120,10 @@ And in the end, managers are human, and like every other human, they will make m
 
 This article was inspired by [Ruchi Bajpai](https://www.linkedin.com/in/ruchi-bajpai-bb3552/), my manager at [ThoughtSpot](https://www.thoughtspot.com). After working with her, I truly realized how a great manager can help you make huge improvements in your work. I have been lucky to find many great managers who have shaped how I work, and I am very grateful to all of them.
 
+![Me with my manager, Ruchi](../../../assets/blog/the-great-manager/final.png)
+
+---
+
 :::note
 The views expressed in this article are my own and does not represent those of my current, past or future employers. The content has been written by a human, and images have been generated via AI - [Google Nano Banana Pro](https://gemini.google/overview/image-generation/).
 ![NotByAI](../../../assets/icons/Written-By-a-Human-Not-By-AI-Badge-white.svg)
